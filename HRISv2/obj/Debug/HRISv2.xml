@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+HRISv2
+</name>
+</assembly>
+<members>
+<member name="P:HRISv2.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:HRISv2.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:HRISv2.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:HRISv2.HRISLibrary.Database.Open(System.String,HRISv2.HRISLibrary.Declares.PreferedDbType)">
+	<summary>
+ Opens a connection between application and supported databases. 
+ </summary>
+	<param name="ConnectionString">(String) Connection parameter. See database documentation for reference.</param>
+	<param name="DbType">(Database Type) Supported database includes MSSQL, MYSQL and Oracle(soon).</param>
+	<returns>(Object) Connection object.</returns>
+	<remarks>Created by Romel S. Dela Cruz on May 25, 2016</remarks>
+</member><member name="M:HRISv2.HRISLibrary.Database.Open(System.String,System.String,System.String,System.String,HRISv2.HRISLibrary.Declares.PreferedDbType,System.Int32,System.Boolean)">
+	<summary>
+ Opens a connection between application and supported databases. 
+ </summary>
+	<param name="ServerHost">(String) Database server hostname or IP address.</param>
+	<param name="DefaultDatabase">(String) Database name. </param>
+	<param name="UserId">(String) Server Login Id.</param>
+	<param name="Password">(String) Server Login Password.</param>
+	<param name="DbType">(Database Type) Supported database includes MSSQL, MYSQL and Oracle(soon).</param>
+	<param name="DefaultPort">(Integer) Port used for the connection.</param>
+	<param name="TrustedConnection">(Boolean) Use secured connection.</param>
+	<returns>(Object) Connection object.</returns>
+	<remarks>Created by Romel S. Dela Cruz on May 25, 2016</remarks>
+</member><member name="M:HRISv2.HRISLibrary.Database.ExecuteCommand(System.Object,HRISv2.HRISLibrary.Declares.PreferedDbType,System.String,System.Collections.ArrayList,System.Data.CommandType)">
+	<summary>
+ Command query execution.
+ </summary>
+	<param name="UsedConnection">(Connection Object) Currently used active connection object.</param>
+	<param name="DbType">(Database Types) Supported database includes MSSQL, MYSQL and Oracle(soon).</param>
+	<param name="CommandString">(String) Query statement(s) to be executed/processed.</param>
+	<param name="CommandParameters">(Array) Set of connection parameters.</param>
+	<param name="CommandTypes">(Object) Command / Query type.</param>
+	<returns>Datatable</returns>
+	<remarks>Created by Romel S. Dela Cruz on June 4, 2016</remarks>
+</member><member name="M:HRISv2.HRISLibrary.Database.GetResults(System.Object,System.String,HRISv2.HRISLibrary.Declares.PreferedDbType,System.Collections.ArrayList,System.Data.CommandType)">
+	<summary>
+ Query statement execution object.
+ </summary>
+	<param name="UsedConnection">(Connection Object) Currently used active connection object.</param>
+	<param name="CommandString">(String) Query statement(s) to be executed/processed.</param>
+	<param name="DbType">(Database Type) Supported database includes MSSQL, MYSQL and Oracle(soon).</param>
+	<param name="CommandParameters">(Array) Set of connection parameters.</param>
+	<param name="CommandTypes">(Object) Command / Query type.</param>
+	<returns>Datatable</returns>
+	<remarks>Created by Romel S. Dela Cruz on May 25, 2016</remarks>
+</member><member name="M:HRISv2.HRISLibrary.Database.LoadDataToControl(System.Object,System.String,HRISv2.HRISLibrary.Declares.PreferedDbType,System.Windows.Forms.Control@,System.Collections.ArrayList,System.Data.CommandType)">
+	<summary>
+ Data loader for Combobox and Listbox
+ </summary>
+	<param name="UsedConnection">(Connection Object) Currently used active connection object.</param>
+	<param name="CommandString">(String) Query statement(s) to be executed/processed.</param>
+	<param name="DbType">(Object) Supported database includes MSSQL, MYSQL and Oracle(soon)</param>
+	<param name="ControlObject">(Winform Control) Target control where to load data.</param>
+	<param name="CommandParameters">(Arraylist) Collection of parameters to be passed to a command. Default NULL.</param>
+	<param name="CommandTypes">(CommandType) Command type.</param>
+	<remarks>Created by Romel S. Dela Cruz on May 25, 2016</remarks>
+</member><member name="M:HRISv2.HRISLibrary.Database.LogAudit(System.Object,HRISv2.HRISLibrary.Declares.PreferedDbType,System.Int32,System.Int32,System.String,System.String,System.Int32,System.Object@)">
+	<summary>
+ Activity and/or Audit Logging
+ </summary>
+	<param name="UsedConnection">(Connection Object) Currently used active connection object.</param>
+	<param name="DbType">(Object) Supported database includes MSSQL, MYSQL and Oracle(soon).</param>
+	<param name="TranType">(Integer) Transaction Types for Audit logs. Possible values : 0- Insert, 1- Retrieve.</param>
+	<param name="LogSourceType">(Integer) Log/Activity Source. Possible values : 0- Application, 1- Query Command, 2- Exception.</param>
+	<param name="LogSourceDesc">(String) Log Source Description.</param>
+	<param name="LogActivity">(String) Activity description or exception message.</param>
+	<param name="CurrentUser">(Integer) Current user handle id</param>
+	<param name="ReturnValue">(Object) Results handler/storage. </param>
+	<remarks>Created by Romel S. Dela Cruz on June 5, 2016</remarks>
+</member>
+</members>
+</doc>
